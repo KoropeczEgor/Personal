@@ -2,6 +2,8 @@ const tabLinks = document.querySelectorAll(".about-tab-links");
 const tabContents = document.querySelectorAll(".about-tab-contents");
 const tabTitles = document.querySelector(".about-tab-titles");
 
+/*     about    */
+
 function removeTabClass() {
   tabContents.forEach((element) => {
     element.classList.remove("active-tab");
