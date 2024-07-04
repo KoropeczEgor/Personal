@@ -22,3 +22,20 @@ tabLinks.forEach((element, index) => {
     addTabClass(index);
   });
 });
+
+/*    portfolio     */
+
+const workList = document.querySelectorAll(".portfolio-work-list");
+const layer = document.querySelectorAll(".layer");
+
+workList.forEach((element, index) => {
+  element.addEventListener("mouseover", () => {
+    layer[index].style.opacity = "1";
+  });
+});
+
+workList.forEach((element, index) => {
+  element.addEventListener("mouseout", () => {
+    layer[index].style.opacity = "0";
+  });
+});
