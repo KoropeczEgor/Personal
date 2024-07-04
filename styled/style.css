@@ -64,7 +64,10 @@ span {
 
 header {
   width: 100%;
-  margin-top: 3%;
+  padding-top: 1%;
+  padding-bottom: 1%;
+  position: fixed;
+  z-index: 10000;
 }
 
 .menu {
@@ -78,7 +81,6 @@ header {
   justify-content: flex-end;
   flex-wrap: wrap;
   gap: 20px;
-  width: 100%;
 }
 
 /*     promo    */
@@ -123,6 +125,7 @@ header {
 
 .about-left {
   flex-basis: 35%;
+  color: #00a6504c;
 }
 
 .about-right {

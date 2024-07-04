@@ -39,3 +39,17 @@ workList.forEach((element, index) => {
     layer[index].style.opacity = "0";
   });
 });
+
+/*    scroll    */
+
+const header = document.querySelector(".header");
+
+window.addEventListener("scroll", () => {
+  if (window.scrollY > 0) {
+    header.style.boxShadow = "4px 34px 10px -26px rgba(34, 60, 80, 0.42)";
+    header.style.background = "#00a6504c";
+  } else {
+    header.style.boxShadow = "0 0 0 rgba(0, 0, 0, 0)";
+    header.style.background = "none";
+  }
+});
