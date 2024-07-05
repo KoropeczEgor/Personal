@@ -40,7 +40,7 @@ workList.forEach((element, index) => {
   });
 });
 
-/*    scroll    */
+/*    scroll-header    */
 
 const header = document.querySelector(".header");
 
@@ -52,4 +52,70 @@ window.addEventListener("scroll", () => {
     header.style.boxShadow = "0 0 0 rgba(0, 0, 0, 0)";
     header.style.background = "none";
   }
+});
+
+/*     scroll      */
+
+//hovering the cursor over the card
+gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
+
+const tl = gsap.timeline();
+
+tl.fromTo(
+  ".promo-directions",
+  { x: -100, opacity: 0 },
+  { x: 0, opacity: 1, duration: 2 }
+)
+  .fromTo(
+    ".promo-right",
+    { x: 100, opacity: 0 },
+    { x: 0, opacity: 1, duration: 1 }
+  )
+  .fromTo(
+    ".promo-name",
+    { y: -100, opacity: 0 },
+    { y: 0, opacity: 1, duration: 2 }
+  );
+//conditions for mobile devices
+if (ScrollTrigger.isTouch !== 1) {
+  //define the Scroll area
+  ScrollSmoother.create({
+    wrapper: ".wrapper",
+    content: ".content",
+    smooth: 1,
+    effects: true,
+  });
+}
+//исчезновения
+// gsap.fromTo(
+//   ".promo-right",
+//   { opacity: 1 },
+//   {
+//     opacity: 0,
+//     ScrollTrigger: {
+//       trigger: ".promo-right",
+//       start: "center",
+//       end: "2900",
+//       scrub: true,
+//     },
+//   }
+// );
+
+let itemsLeft = gsap.utils.toArray(".about-left .about-img");
+
+itemsLeft.forEach((item) => {
+  gsap.fromTo(
+    item,
+    { x: -2500, opacity: 0 },
+    {
+      opacity: 1,
+      x: 0,
+      ScrollTrigger: {
+        trigger: item,
+        start: "-850",
+        end: "-100",
+        scrub: true,
+      },
+    }
+  );
 });

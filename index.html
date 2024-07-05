@@ -4,226 +4,245 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Presentation</title>
-    <link rel="stylesheet" href="./styled/style.css" />
+
+    <link rel="stylesheet" href="styled/style.css" />
   </head>
   <body>
-    <header class="header">
-      <div class="container">
-        <nav class="menu">
-          <ul class="menu-links">
-            <li><a href="#promo">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#services">Services</a></li>
-            <li><a href="#portfolio">Portfolio</a></li>
-            <li><a href="#contact">Contact</a></li>
-          </ul>
-        </nav>
+    <div class="wrapper">
+      <div class="content">
+        <header class="header">
+          <div class="container">
+            <nav class="menu">
+              <ul class="menu-links">
+                <li><a href="#promo">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#contact">Contact</a></li>
+              </ul>
+            </nav>
+          </div>
+        </header>
+
+        <main class="main">
+          <promo class="promo" id="promo">
+            <div class="container">
+              <div class="promo-row">
+                <div data-speed=".75" class="promo-left">
+                  <p class="promo-directions">Keratin Straightening</p>
+                  <h1>
+                    Hi, I'm <span class="promo-name">Svetlana</span> <br />from
+                    Moscow
+                  </h1>
+                </div>
+                <div class="promo-right">
+                  <img
+                    data-lag=".5"
+                    data-speed=".8"
+                    src="./assets/Sveta.png"
+                    alt="promo-right"
+                    class="promo-img"
+                  />
+                </div>
+              </div>
+            </div>
+          </promo>
+
+          <section class="about" id="about">
+            <div class="container">
+              <div class="about-row">
+                <div data-speed=".9" class="about-left">
+                  <img src="./assets/about.jpg" alt="about" class="about-img" />
+                </div>
+                <div data-speed="1.1" class="about-right">
+                  <h2 class="subtitle">About Me</h2>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Voluptatum et fugit totam adipisci perferendis ipsam
+                    corrupti error a velit, reprehenderit laboriosam placeat!
+                    Animi error beatae voluptatem accusantium odit alias rem?
+                  </p>
+                  <div class="about-tab-titles">
+                    <p class="about-tab-links active-link">skills</p>
+                    <p class="about-tab-links">Experiance</p>
+                    <p class="about-tab-links">Education</p>
+                  </div>
+
+                  <div class="about-tab-contents active-tab" id="Skills">
+                    <ul>
+                      <li>
+                        <span>Straightening</span><br />Lorem ipsum dolor sit
+                        amet consectetur
+                      </li>
+                      <li>
+                        <span>Straightening</span><br />Lorem ipsum dolor sit
+                        amet consectetur
+                      </li>
+                      <li>
+                        <span>Straightening</span><br />Lorem ipsum dolor sit
+                        amet consectetur
+                      </li>
+                    </ul>
+                  </div>
+
+                  <div class="about-tab-contents" id="Experiance">
+                    <ul>
+                      <li>
+                        <span>2021-2024</span><br />
+                        Lorem ipsum dolor sit amet
+                      </li>
+                      <li>
+                        <span>2019- 2021</span><br />Lorem ipsum dolor sit amet
+                      </li>
+                      <li>
+                        <span>2017- 2019</span><br />Lorem ipsum dolor sit amet
+                      </li>
+                    </ul>
+                  </div>
+
+                  <div class="about-tab-contents" id="Education">
+                    <ul>
+                      <li><span>2016</span><br />Lorem ipsum dolor sit amet</li>
+                      <li><span>2015</span><br />Lorem ipsum dolor sit amet</li>
+                      <li><span>2013</span><br />Lorem ipsum dolor sit amet</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section class="services" id="services">
+            <div class="container">
+              <h3 class="subtitle services-title">My Services</h3>
+              <ul class="services-list">
+                <li data-lag=".5" data-speed=".6" class="services-tab">
+                  <h3>Straightening</h3>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Quisquam quod, voluptates, quae, quos quia quibusdam
+                  </p>
+                  <a href="#">Learn more</a>
+                </li>
+
+                <li class="services-tab">
+                  <h3>Straightening</h3>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Quisquam quod, voluptates, quae, quos quia quibusdam
+                  </p>
+                  <a href="#">Learn more</a>
+                </li>
+
+                <li data-lag=".5" data-speed=".6" class="services-tab">
+                  <h3>Straightening</h3>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Quisquam quod, voluptates, quae, quos quia quibusdam
+                  </p>
+                  <a href="#">Learn more</a>
+                </li>
+              </ul>
+            </div>
+          </section>
+
+          <section class="portfolio" id="portfolio">
+            <div class="container">
+              <h4 class="subtitle">My Work</h4>
+
+              <ul class="portfolio-work">
+                <li class="portfolio-work-list">
+                  <img src="./assets/portfolio1.jpg" alt="portfolio1" />
+                  <div class="layer">
+                    <h3>Straightening</h3>
+                    <p>
+                      Lorem ipsum dolor sit amet ma as name, consectetur
+                      adipisicing elit<br />
+                      Quas quos laborum sunt.
+                    </p>
+                    <a href="" class="link-btn">
+                      <button class="btn btn2">transition</button>
+                    </a>
+                  </div>
+                </li>
+
+                <li class="portfolio-work-list">
+                  <img src="./assets/portfolio2.jpg" alt="portfolio2" />
+                  <div class="layer">
+                    <h3>Straightening</h3>
+                    <p>
+                      Lorem ipsum dolor sit amet ma as name, consectetur
+                      adipisicing elit<br />
+                      Quas quos laborum sunt.
+                    </p>
+                    <a href="" class="link-btn">
+                      <button class="btn btn2">transition</button>
+                    </a>
+                  </div>
+                </li>
+
+                <li class="portfolio-work-list">
+                  <img src="./assets/portfolio3.jpg" alt="portfolio3" />
+                  <div class="layer">
+                    <h3>Straightening</h3>
+                    <p>
+                      Lorem ipsum dolor sit amet ma as name, consectetur
+                      adipisicing elit<br />
+                      Quas quos laborum sunt.
+                    </p>
+                    <a href="">
+                      <button class="btn btn2">transition</button>
+                    </a>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+
+          <section class="contact" id="contact">
+            <div class="container">
+              <div class="contact-row">
+                <div class="contact-left">
+                  <h4 class="subtitle">Contect Me</h4>
+                  <a href="#">meHi@mail.com</a>
+                  <a href="#">8-905-107-99-00</a>
+                  <div class="contact-icons">
+                    <a href="#" class="twitter"></a>
+                    <a href="#" class="instagram"></a>
+                    <a href="#" class="linkedin"></a>
+                  </div>
+                </div>
+                <div class="contact-right">
+                  <form>
+                    <input
+                      type="text"
+                      name="Name"
+                      placeholder="Enter your name"
+                      required
+                    />
+                    <input
+                      type="text"
+                      name="Email"
+                      placeholder="Enter your name"
+                      required
+                    />
+                    <textarea
+                      name="Massage"
+                      row="6"
+                      placeholder="enter your massmage"
+                    ></textarea>
+                    <button type="submit" class="btn btn2">Submit</button>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </section>
+        </main>
       </div>
-    </header>
-    <main class="main">
-      <promo class="promo" id="promo">
-        <div class="container">
-          <div class="promo-row">
-            <div class="promo-left">
-              <p>Keratin Straightening</p>
-              <h1>Hi, I'm <span>Svetlana</span> <br />from Moscow</h1>
-            </div>
-            <div class="promo-right">
-              <img src="./assets/Sveta.png" alt="Sveta" class="promo-img" />
-            </div>
-          </div>
-        </div>
-      </promo>
-      <section class="about" id="about">
-        <div class="container">
-          <div class="about-row">
-            <div class="about-left">
-              <img src="./assets/about.jpg" alt="about" class="about-img" />
-            </div>
-            <div class="about-right">
-              <h2 class="subtitle">About Me</h2>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Voluptatum et fugit totam adipisci perferendis ipsam corrupti
-                error a velit, reprehenderit laboriosam placeat! Animi error
-                beatae voluptatem accusantium odit alias rem?
-              </p>
-              <div class="about-tab-titles">
-                <p class="about-tab-links active-link">skills</p>
-                <p class="about-tab-links">Experiance</p>
-                <p class="about-tab-links">Education</p>
-              </div>
-
-              <div class="about-tab-contents active-tab" id="Skills">
-                <ul>
-                  <li>
-                    <span>Straightening</span><br />Lorem ipsum dolor sit amet
-                    consectetur
-                  </li>
-                  <li>
-                    <span>Straightening</span><br />Lorem ipsum dolor sit amet
-                    consectetur
-                  </li>
-                  <li>
-                    <span>Straightening</span><br />Lorem ipsum dolor sit amet
-                    consectetur
-                  </li>
-                </ul>
-              </div>
-
-              <div class="about-tab-contents" id="Experiance">
-                <ul>
-                  <li>
-                    <span>2021-2024</span><br />
-                    Lorem ipsum dolor sit amet
-                  </li>
-                  <li>
-                    <span>2019- 2021</span><br />Lorem ipsum dolor sit amet
-                  </li>
-                  <li>
-                    <span>2017- 2019</span><br />Lorem ipsum dolor sit amet
-                  </li>
-                </ul>
-              </div>
-
-              <div class="about-tab-contents" id="Education">
-                <ul>
-                  <li><span>2016</span><br />Lorem ipsum dolor sit amet</li>
-                  <li><span>2015</span><br />Lorem ipsum dolor sit amet</li>
-                  <li><span>2013</span><br />Lorem ipsum dolor sit amet</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="services" id="services">
-        <div class="container">
-          <h3 class="subtitle services-title">My Services</h3>
-          <ul class="services-list">
-            <li class="services-tab">
-              <h3>Straightening</h3>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Quisquam quod, voluptates, quae, quos quia quibusdam
-              </p>
-              <a href="#">Learn more</a>
-            </li>
-
-            <li class="services-tab">
-              <h3>Straightening</h3>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Quisquam quod, voluptates, quae, quos quia quibusdam
-              </p>
-              <a href="#">Learn more</a>
-            </li>
-
-            <li class="services-tab">
-              <h3>Straightening</h3>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Quisquam quod, voluptates, quae, quos quia quibusdam
-              </p>
-              <a href="#">Learn more</a>
-            </li>
-          </ul>
-        </div>
-      </section>
-
-      <section class="portfolio" id="portfolio">
-        <div class="container">
-          <h4 class="subtitle">My Work</h4>
-
-          <ul class="portfolio-work">
-            <li class="portfolio-work-list">
-              <img src="./assets/portfolio1.jpg" alt="portfolio1" />
-              <div class="layer">
-                <h3>Straightening</h3>
-                <p>
-                  Lorem ipsum dolor sit amet ma as name, consectetur adipisicing
-                  elit<br />
-                  Quas quos laborum sunt.
-                </p>
-                <a href="" class="link-btn">
-                  <button class="btn btn2">transition</button>
-                </a>
-              </div>
-            </li>
-
-            <li class="portfolio-work-list">
-              <img src="./assets/portfolio2.jpg" alt="portfolio2" />
-              <div class="layer">
-                <h3>Straightening</h3>
-                <p>
-                  Lorem ipsum dolor sit amet ma as name, consectetur adipisicing
-                  elit<br />
-                  Quas quos laborum sunt.
-                </p>
-                <a href="" class="link-btn">
-                  <button class="btn btn2">transition</button>
-                </a>
-              </div>
-            </li>
-
-            <li class="portfolio-work-list">
-              <img src="./assets/portfolio3.jpg" alt="portfolio3" />
-              <div class="layer">
-                <h3>Straightening</h3>
-                <p>
-                  Lorem ipsum dolor sit amet ma as name, consectetur adipisicing
-                  elit<br />
-                  Quas quos laborum sunt.
-                </p>
-                <a href="">
-                  <button class="btn btn2">transition</button>
-                </a>
-              </div>
-            </li>
-          </ul>
-        </div>
-      </section>
-
-      <section class="contact" id="contact">
-        <div class="container">
-          <div class="contact-row">
-            <div class="contact-left">
-              <h4 class="subtitle">Contect Me</h4>
-              <a href="#">meHi@mail.com</a>
-              <a href="#">8-905-107-99-00</a>
-              <div class="contact-icons">
-                <a href="#" class="twitter"></a>
-                <a href="#" class="instagram"></a>
-                <a href="#" class="linkedin"></a>
-              </div>
-            </div>
-            <div class="contact-right">
-              <form>
-                <input
-                  type="text"
-                  name="Name"
-                  placeholder="Enter your name"
-                  required
-                />
-                <input
-                  type="text"
-                  name="Email"
-                  placeholder="Enter your name"
-                  required
-                />
-                <textarea
-                  name="Massage"
-                  row="6"
-                  placeholder="enter your massmage"
-                ></textarea>
-                <button type="submit" class="btn btn2">Submit</button>
-              </form>
-            </div>
-          </div>
-        </div>
-      </section>
-    </main>
+    </div>
   </body>
-  <script src="./js/scripts.js"></script>
+  <script src="libs/gsap/gsap.min.js"></script>
+  <script src="libs/gsap/ScrollTrigger.min.js"></script>
+  <script src="libs/gsap/ScrollSmoother.min.js"></script>
+  <script src="js/scripts.js"></script>
 </html>
