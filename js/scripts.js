@@ -112,8 +112,23 @@ gsap.fromTo(
     scrollTrigger: {
       trigger: ".about-img",
       markers: true,
-      start: "10",
-      end: "1100",
+      start: "0",
+      end: "800",
+      scrub: true,
+    },
+  }
+);
+gsap.fromTo(
+  ".about-tab-contents",
+  { y: 900, opacity: 0 },
+  {
+    y: 0,
+    opacity: 1,
+    scrollTrigger: {
+      trigger: ".about-img",
+      markers: true,
+      start: "0",
+      end: "800",
       scrub: true,
     },
   }
