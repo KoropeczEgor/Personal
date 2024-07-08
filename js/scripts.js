@@ -133,3 +133,26 @@ gsap.fromTo(
     },
   }
 );
+
+/*     validation     */
+
+const validator = new JustValidate("#form");
+
+validator
+  .addField("#name", [
+    {
+      rule: "required",
+      errorMessage: "Введите имя!",
+    },
+    {
+      rule: "minLength",
+      value: 2,
+      errorMessage: "Минимум 2 символа!",
+    },
+  ])
+  .addField("#tel", [
+    {
+      rule: "required",
+      errorMessage: "Введите email!",
+    },
+  ]);

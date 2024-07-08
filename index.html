@@ -146,7 +146,7 @@
             </div>
           </section>
 
-          <section class="portfolio" id="portfolio">
+          <!-- <section class="portfolio" id="portfolio">
             <div class="container">
               <h4 class="subtitle">My Work</h4>
 
@@ -197,7 +197,7 @@
                 </li>
               </ul>
             </div>
-          </section>
+          </section> -->
 
           <section class="contact" id="contact">
             <div class="container">
@@ -213,21 +213,31 @@
                   </div>
                 </div>
                 <div class="contact-right">
-                  <form>
+                  <form id="form" class="form">
                     <input
                       type="text"
+                      id="name"
                       name="Name"
                       placeholder="Enter your name"
                       required
                     />
                     <input
+                      type="tel"
+                      id="tel"
+                      name="Tel"
+                      placeholder="Tel"
+                      required
+                    />
+                    <input
                       type="text"
+                      id="email"
                       name="Email"
-                      placeholder="Enter your name"
+                      placeholder="Email"
                       required
                     />
                     <textarea
                       name="Massage"
+                      id="massage"
                       row="6"
                       placeholder="enter your massmage"
                     ></textarea>
@@ -244,5 +254,8 @@
   <script src="libs/gsap/gsap.min.js"></script>
   <script src="libs/gsap/ScrollTrigger.min.js"></script>
   <script src="libs/gsap/ScrollSmoother.min.js"></script>
+
+  <script src="https://unpkg.com/just-validate@latest/dist/just-validate.production.min.js"></script>
+
   <script src="js/scripts.js"></script>
 </html>
