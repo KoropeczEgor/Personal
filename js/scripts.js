@@ -135,6 +135,9 @@ gsap.fromTo(
 );
 
 /*     validation     */
+const selector = document.querySelector("#tel");
+const im = new Inputmask("+7-(999)-999-99-99");
+im.mask(selector);
 
 const validator = new JustValidate("#form");
 
@@ -152,7 +155,44 @@ validator
   ])
   .addField("#tel", [
     {
+      validator: (value) => {
+        const phone = selector.inputmask.unmaskedvalue();
+
+        return Boolean(Number(phone) && phone.length > 0);
+      },
+      errorMessage: "Введите телефон!",
+    },
+    {
+      validator: (value) => {
+        const phone = selector.inputmask.unmaskedvalue();
+        return Boolean(Number(phone) && phone.length === 10);
+      },
+      errorMessage: "Введите телефон полностью!",
+    },
+  ])
+  .addField("#email", [
+    {
       rule: "required",
+    },
+    {
+      rule: "required",
+    },
+    {
+      rule: "email",
       errorMessage: "Введите email!",
     },
-  ]);
+  ])
+  .addField("#massage", [
+    {
+      rule: "required",
+      errorMessage: "Введите сообщения!",
+    },
+    {
+      rule: "minLength",
+      value: 10,
+      errorMessage: "Минимум 10 символа!",
+    },
+  ])
+  .onSuccess(function () {
+    alert("dsad");
+  });
